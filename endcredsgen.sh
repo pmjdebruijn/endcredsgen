@@ -63,7 +63,7 @@ while IFS=';' read ROLE NAME; do
   NAME=$(echo ${NAME} | tr 'a-z' 'A-Z')
 
   if [[ -z "${NAME}" ]]; then
-    echo "echo <text text-anchor=\"middle\" x=\"${SECT_X}\" y=\"${Y}\" class=\"role\">${ROLE}</text>"		>> ${TEMPFILE}
+    echo "echo <text text-anchor=\"middle\" x=\"${SECT_X}\" y=\"${Y}\" class=\"sect\">${ROLE}</text>"		>> ${TEMPFILE}
   else
     echo "echo <text text-anchor=\"end\"    x=\"${ROLE_X}\" y=\"${Y}\" class=\"role\">${ROLE}</text>"		>> ${TEMPFILE}
     echo "echo <text text-anchor=\"start\"  x=\"${NAME_X}\" y=\"${Y}\" class=\"name\">${NAME}</text>"		>> ${TEMPFILE}
